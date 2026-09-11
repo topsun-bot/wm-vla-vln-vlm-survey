@@ -46,5 +46,8 @@ Short survey points for a robotics / ODM stack. No fabricated citations.
 ## Pack pointers
 
 - Full paper table: `PAPERS.md` / `papers_merged.jsonl`
+- Per-paper Chinese summaries: `PAPERS_DETAIL.md` / `papers_detailed.jsonl`
+- Chinese companion: `CROSSWALK.zh.md` (this file stays English)
 - OSS comparison: `oss_repos.md` / `oss_repos.jsonl`
-- Methodology & gaps: `README.md`
+- Forks under `topsun-bot`: `forks_created.md`
+- Methodology & gaps: `README.md` (Chinese)

@@ -1,8 +1,10 @@
-# World Model × VLA / VLN / VLM — Merged Paper Index
+# World Model × VLA / VLN / VLM — 合并论文索引
 
-Unique verified papers: **131**. Retrieval / merge UTC: **2026-09-11T15:31:03Z**.
+已核验去重论文：**131** 篇。检索 / 合并 UTC：**2026-09-11T15:31:03Z**。
 
-Deduped primarily by arXiv ID (version suffix `vN` stripped), else by normalized title. Tags reflect source lists + original VLA/VLN/VLM labels.
+主键为 arXiv ID（去掉版本后缀 `vN`），否则用规范化标题。标签来自源表及原 VLA/VLN/VLM 标注。
+
+**需要摘要与要点（方法 / 贡献 / 与 WM×VLA·VLN·VLM 的关系）请看 [`PAPERS_DETAIL.md`](PAPERS_DETAIL.md)**（中文转述；英文摘要原文在 [`papers_detailed.jsonl`](papers_detailed.jsonl)）。本表只做速查。
 
 | # | Title | Year | Tags | arXiv/DOI | URL |
 | ---: | --- | ---: | --- | --- | --- |
@@ -140,14 +142,14 @@ Deduped primarily by arXiv ID (version suffix `vN` stripped), else by normalized
 
 ---
 
-## Tag legend
+## 标签说明
 
-- `world_model` — from world-models survey list
-- `VLA` / `VLN` / `VLM` — primary label from VLA/VLN/VLM list
-- `intersection` — multi-family / bridging paper in VLA list
-- niche tags (e.g. `video_prediction_wm`) — only if added via expansion
+- `world_model` — 来自世界模型调研表
+- `VLA` / `VLN` / `VLM` — 来自 VLA/VLN/VLM 表的主标签
+- `intersection` — VLA 表中的跨家族 / 桥接论文
+- 细分标签（如 `video_prediction_wm`）— 仅扩表时出现（本包未扩表）
 
-### Tag counts (paper may have multiple)
+### 标签计数（一篇可多标）
 
 - `world_model`: 58
 - `VLM`: 23
