@@ -3427,7 +3427,7 @@
 共 76 篇。先扫目录，再下翻卡片。
 
 - [178. AdaPlanner: Adaptive Planning from Feedback with Language Models](#p-178)  `llm-agent` · `agent-robot`
-- [179. An Embodied Generalist Agent in 3D World](#p-179)  `VLA` · `VLM`
+- [179. An Embodied Generalist Agent in 3D World](#p-179)  `agent-robot` · `VLA` · `VLM` · `llm-agent`
 - [180. Bridging Language and Action: A Survey of Language-Conditioned Robot Manipulation](#p-180)  `intersection`
 - [181. Building Cooperative Embodied Agents Modularly with Large Language Models](#p-181)  `agent-robot` · `llm-agent`
 - [182. Chat with the Environment: Interactive Multimodal Perception Using Large Language Models](#p-182)  `agent-robot` · `llm-agent` · `VLM`
@@ -3442,7 +3442,7 @@
 - [191. Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](#p-191)  `VLM`
 - [192. DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment](#p-192)  `agent-robot` · `llm-agent`
 - [193. DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving](#p-193)  `world_model`
-- [194. EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](#p-194)  `agent-robot` · `VLM`
+- [194. EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](#p-194)  `agent-robot` · `VLM` · `llm-agent`
 - [195. Eureka: Human-Level Reward Design via Coding Large Language Models](#p-195)  `agent-robot` · `llm-agent`
 - [196. Foundation Models in Robotics: Applications, Challenges, and the Future](#p-196)  `llm-agent` · `VLM`
 - [197. GAIA-1: A Generative World Model for Autonomous Driving](#p-197)  `world_model`
@@ -3488,7 +3488,7 @@
 - [237. Skill Reinforcement Learning and Planning for Open-World Long-Horizon Tasks](#p-237)  `agent-robot` · `llm-agent`
 - [238. SMART-LLM: Smart Multi-Agent Robot Task Planning using Large Language Models](#p-238)  `agent-robot` · `llm-agent`
 - [239. Statler: State-Maintaining Language Models for Embodied Reasoning](#p-239)  `agent-robot` · `llm-agent`
-- [240. STEVE-1: A Generative Model for Text-to-Behavior in Minecraft](#p-240)  `agent-robot`
+- [240. STEVE-1: A Generative Model for Text-to-Behavior in Minecraft](#p-240)  `agent-robot` · `llm-agent`
 - [241. STORM: Efficient Stochastic Transformer based World Models for Reinforcement Learning](#p-241)  `world_model`
 - [242. Task and Motion Planning with Large Language Models for Object Rearrangement](#p-242)  `agent-robot` · `llm-agent`
 - [243. Text2Motion: From Natural Language Instructions to Feasible Plans](#p-243)  `agent-robot` · `llm-agent`
@@ -3526,16 +3526,16 @@
 ### 179. An Embodied Generalist Agent in 3D World
 
 - **年份：** 2023
-- **标签：** `VLA` · `VLM`
+- **标签：** `agent-robot` · `VLA` · `VLM` · `llm-agent`
 - **链接：** [arXiv:2311.12871](https://arxiv.org/abs/2311.12871)
 
-**摘要：** LEO（Embodied Generalist Agent in 3D World）在三维世界中用统一模型做导航与操作等具身任务，连接语言与 3D 感知—动作。作为具身通才，它补全本包 OSS 已收录、论文卡片此前缺失的缺口。
+**摘要：** 现有通用模型多依赖二维图像，对三维输入与三维世界中定义的任务（接地、具身推理与行动）能力有限。LEO 是面向三维世界的具身多模态通才智能体，统一任务接口、架构与目标，分两阶段训练：三维视觉—语言对齐，再做三维视觉—语言—动作（`VLA`）指令微调。作者收集物体级与场景级大规模数据，并用 LLM 辅助管线生成高质量三维视觉—语言数据。实验覆盖三维描述、问答、具身推理、导航与操作；消融与缩放分析为后续具身通才提供参照。代码与数据见项目页。
 
 **要点：**
 
-- **方法：** 统一具身通才模型在 3D 世界中做语言条件导航与操作。
-- **贡献：** 展示三维感知—语言—动作的通才智能体。
-- **关系：** 3D `VLA` / 具身通才，介于 `VLM` 与动作策略之间。
+- **方法：** 两阶段训练——3D 视觉—语言对齐 + 3D `VLA` 指令微调；统一接口，并以 LLM 辅助生成 3D VL 数据。
+- **贡献：** 在三维描述、问答、具身推理、导航与操作上展示通才能力，并给出消融与缩放分析。
+- **关系：** 研究员包标为具身 LLM Agent；同时是 3D `VLM` / `VLA` 通才。
 
 ---
 
@@ -3796,7 +3796,7 @@
 ### 194. EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought
 
 - **年份：** 2023
-- **标签：** `agent-robot` · `VLM`
+- **标签：** `agent-robot` · `VLM` · `llm-agent`
 - **链接：** [arXiv:2305.15021](https://arxiv.org/abs/2305.15021)
 
 **摘要：** EmbodiedGPT 是面向具身人工智能的端到端多模态基础模型，用具身思维链做视觉—语言预训练，使智能体具备多模态理解与规划执行能力。模型在具身规划、视觉问答与操作相关基准上提升，展示把 `VLM` 预训练接到动作序列的路径。
@@ -4624,7 +4624,7 @@
 ### 240. STEVE-1: A Generative Model for Text-to-Behavior in Minecraft
 
 - **年份：** 2023
-- **标签：** `agent-robot`
+- **标签：** `agent-robot` · `llm-agent`
 - **链接：** [arXiv:2306.00937](https://arxiv.org/abs/2306.00937)
 
 **摘要：** STEVE-1 把 VPT 行为基础模型按 unCLIP 思路做指令微调：先在 MineCLIP 潜空间对齐指令，再训练文本先验，从而用自监督行为克隆与事后重标注降低文本标注成本（约 60 美元算力）。它用原始像素与键鼠低层控制跟随短时程开放指令，在早期游戏评测中稳健完成 13 项中的 12 项。
@@ -4882,8 +4882,8 @@
 - [258. Inner Monologue: Embodied Reasoning through Planning with Language Models](#p-258)  `VLM`
 - [259. Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents](#p-259)  `agent-robot` · `llm-agent`
 - [260. LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models](#p-260)  `agent-robot` · `llm-agent`
-- [261. LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](#p-261)  `agent-robot` · `VLN`
-- [262. MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](#p-262)  `agent-robot`
+- [261. LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](#p-261)  `agent-robot` · `VLN` · `llm-agent`
+- [262. MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](#p-262)  `agent-robot` · `llm-agent`
 - [263. Open-vocabulary Queryable Scene Representations for Real World Planning](#p-263)  `agent-robot` · `llm-agent`
 - [264. ProgPrompt: Generating Situated Robot Task Plans using Large Language Models](#p-264)  `agent-robot` · `llm-agent`
 - [265. ReAct: Synergizing Reasoning and Acting in Language Models](#p-265)  `llm-agent`
@@ -5025,7 +5025,7 @@
 ### 261. LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action
 
 - **年份：** 2022
-- **标签：** `agent-robot` · `VLN`
+- **标签：** `agent-robot` · `VLN` · `llm-agent`
 - **链接：** [arXiv:2207.04429](https://arxiv.org/abs/2207.04429)
 
 **摘要：** 视觉导航目标常用图像指定，接口不自然。LM-Nav 组合预训练语言模型、视觉—语言模型与视觉导航模型：LLM 把自由语言指令分解为地标列表，`VLM` 在拓扑图上接地这些地标，导航模型再执行。系统在真实户外环境中用语言指令导航，且无需语言标注的导航轨迹。
@@ -5043,7 +5043,7 @@
 ### 262. MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge
 
 - **年份：** 2022
-- **标签：** `agent-robot`
+- **标签：** `agent-robot` · `llm-agent`
 - **链接：** [arXiv:2206.08853](https://arxiv.org/abs/2206.08853)
 
 **摘要：** 开放世界智能体需要多样任务环境、大规模多模态知识与可扩展架构。MineDojo 在 Minecraft 上提供数千开放任务与互联网规模的视频、教程、维基与论坛知识库，并训练 MineCLIP 作为语言条件稠密奖励。该平台成为 Voyager、STEVE-1 与 GITM 等开放式具身 Agent 的共同底座。

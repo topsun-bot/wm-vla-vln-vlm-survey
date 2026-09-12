@@ -227,7 +227,7 @@
 共 76 篇。
 
 178. [AdaPlanner: Adaptive Planning from Feedback with Language Models](PAPERS_DETAIL.md#p-178)  `llm-agent` · `agent-robot` · [`2305.16653`](https://arxiv.org/abs/2305.16653)
-179. [An Embodied Generalist Agent in 3D World](PAPERS_DETAIL.md#p-179)  `VLA` · `VLM` · [`2311.12871`](https://arxiv.org/abs/2311.12871)
+179. [An Embodied Generalist Agent in 3D World](PAPERS_DETAIL.md#p-179)  `agent-robot` · `VLA` · `VLM` · `llm-agent` · [`2311.12871`](https://arxiv.org/abs/2311.12871)
 180. [Bridging Language and Action: A Survey of Language-Conditioned Robot Manipulation](PAPERS_DETAIL.md#p-180)  `intersection` · [`2312.10807`](https://arxiv.org/abs/2312.10807)
 181. [Building Cooperative Embodied Agents Modularly with Large Language Models](PAPERS_DETAIL.md#p-181)  `agent-robot` · `llm-agent` · [`2307.02485`](https://arxiv.org/abs/2307.02485)
 182. [Chat with the Environment: Interactive Multimodal Perception Using Large Language Models](PAPERS_DETAIL.md#p-182)  `agent-robot` · `llm-agent` · `VLM` · [`2303.08268`](https://arxiv.org/abs/2303.08268)
@@ -242,7 +242,7 @@
 191. [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](PAPERS_DETAIL.md#p-191)  `VLM` · [`2303.04137`](https://arxiv.org/abs/2303.04137)
 192. [DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment](PAPERS_DETAIL.md#p-192)  `agent-robot` · `llm-agent` · [`2307.00329`](https://arxiv.org/abs/2307.00329)
 193. [DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving](PAPERS_DETAIL.md#p-193)  `world_model` · [`2309.09777`](https://arxiv.org/abs/2309.09777)
-194. [EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](PAPERS_DETAIL.md#p-194)  `agent-robot` · `VLM` · [`2305.15021`](https://arxiv.org/abs/2305.15021)
+194. [EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought](PAPERS_DETAIL.md#p-194)  `agent-robot` · `VLM` · `llm-agent` · [`2305.15021`](https://arxiv.org/abs/2305.15021)
 195. [Eureka: Human-Level Reward Design via Coding Large Language Models](PAPERS_DETAIL.md#p-195)  `agent-robot` · `llm-agent` · [`2310.12931`](https://arxiv.org/abs/2310.12931)
 196. [Foundation Models in Robotics: Applications, Challenges, and the Future](PAPERS_DETAIL.md#p-196)  `llm-agent` · `VLM` · [`2312.07843`](https://arxiv.org/abs/2312.07843)
 197. [GAIA-1: A Generative World Model for Autonomous Driving](PAPERS_DETAIL.md#p-197)  `world_model` · [`2309.17080`](https://arxiv.org/abs/2309.17080)
@@ -288,7 +288,7 @@
 237. [Skill Reinforcement Learning and Planning for Open-World Long-Horizon Tasks](PAPERS_DETAIL.md#p-237)  `agent-robot` · `llm-agent` · [`2303.16563`](https://arxiv.org/abs/2303.16563)
 238. [SMART-LLM: Smart Multi-Agent Robot Task Planning using Large Language Models](PAPERS_DETAIL.md#p-238)  `agent-robot` · `llm-agent` · [`2309.10062`](https://arxiv.org/abs/2309.10062)
 239. [Statler: State-Maintaining Language Models for Embodied Reasoning](PAPERS_DETAIL.md#p-239)  `agent-robot` · `llm-agent` · [`2306.17840`](https://arxiv.org/abs/2306.17840)
-240. [STEVE-1: A Generative Model for Text-to-Behavior in Minecraft](PAPERS_DETAIL.md#p-240)  `agent-robot` · [`2306.00937`](https://arxiv.org/abs/2306.00937)
+240. [STEVE-1: A Generative Model for Text-to-Behavior in Minecraft](PAPERS_DETAIL.md#p-240)  `agent-robot` · `llm-agent` · [`2306.00937`](https://arxiv.org/abs/2306.00937)
 241. [STORM: Efficient Stochastic Transformer based World Models for Reinforcement Learning](PAPERS_DETAIL.md#p-241)  `world_model` · [`2310.09615`](https://arxiv.org/abs/2310.09615)
 242. [Task and Motion Planning with Large Language Models for Object Rearrangement](PAPERS_DETAIL.md#p-242)  `agent-robot` · `llm-agent` · [`2303.06247`](https://arxiv.org/abs/2303.06247)
 243. [Text2Motion: From Natural Language Instructions to Feasible Plans](PAPERS_DETAIL.md#p-243)  `agent-robot` · `llm-agent` · [`2303.12153`](https://arxiv.org/abs/2303.12153)
@@ -314,8 +314,8 @@
 258. [Inner Monologue: Embodied Reasoning through Planning with Language Models](PAPERS_DETAIL.md#p-258)  `VLM` · [`2207.05608`](https://arxiv.org/abs/2207.05608)
 259. [Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents](PAPERS_DETAIL.md#p-259)  `agent-robot` · `llm-agent` · [`2201.07207`](https://arxiv.org/abs/2201.07207)
 260. [LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models](PAPERS_DETAIL.md#p-260)  `agent-robot` · `llm-agent` · [`2212.04088`](https://arxiv.org/abs/2212.04088)
-261. [LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](PAPERS_DETAIL.md#p-261)  `agent-robot` · `VLN` · [`2207.04429`](https://arxiv.org/abs/2207.04429)
-262. [MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](PAPERS_DETAIL.md#p-262)  `agent-robot` · [`2206.08853`](https://arxiv.org/abs/2206.08853)
+261. [LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](PAPERS_DETAIL.md#p-261)  `agent-robot` · `VLN` · `llm-agent` · [`2207.04429`](https://arxiv.org/abs/2207.04429)
+262. [MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](PAPERS_DETAIL.md#p-262)  `agent-robot` · `llm-agent` · [`2206.08853`](https://arxiv.org/abs/2206.08853)
 263. [Open-vocabulary Queryable Scene Representations for Real World Planning](PAPERS_DETAIL.md#p-263)  `agent-robot` · `llm-agent` · [`2209.09874`](https://arxiv.org/abs/2209.09874)
 264. [ProgPrompt: Generating Situated Robot Task Plans using Large Language Models](PAPERS_DETAIL.md#p-264)  `agent-robot` · `llm-agent` · [`2209.11302`](https://arxiv.org/abs/2209.11302)
 265. [ReAct: Synergizing Reasoning and Acting in Language Models](PAPERS_DETAIL.md#p-265)  `llm-agent` · [`2210.03629`](https://arxiv.org/abs/2210.03629)
@@ -355,8 +355,8 @@
 
 | 标签 | 含义 | 篇数 |
 | --- | --- | ---: |
-| `agent-robot` | Agent 控制机器人 / 具身编排 | 93 |
-| `llm-agent` | LLM / 工具使用 / 规划智能体 | 83 |
+| `agent-robot` | Agent 控制机器人 / 具身编排 | 94 |
+| `llm-agent` | LLM / 工具使用 / 规划智能体 | 88 |
 | `world_model` | 世界模型主线 | 74 |
 | `VLA` | 视觉—语言—动作策略 | 63 |
 | `VLM` | 视觉—语言模型 / 具身多模态 | 38 |

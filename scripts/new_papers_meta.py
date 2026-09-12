@@ -38,7 +38,7 @@ KEEP = {
         ],
     },
     "2206.08853": {
-        "tags": ["agent-robot"],
+        "tags": ["agent-robot", "llm-agent"],
         "sources": ["agent_robot"],
         "abstract_zh": "开放世界智能体需要多样任务环境、大规模多模态知识与可扩展架构。MineDojo 在 Minecraft 上提供数千开放任务与互联网规模的视频、教程、维基与论坛知识库，并训练 MineCLIP 作为语言条件稠密奖励。该平台成为 Voyager、STEVE-1 与 GITM 等开放式具身 Agent 的共同底座。",
         "highlights_zh": [
@@ -48,7 +48,7 @@ KEEP = {
         ],
     },
     "2207.04429": {
-        "tags": ["agent-robot", "VLN"],
+        "tags": ["agent-robot", "llm-agent", "VLN"],
         "sources": ["agent_robot", "vla_vln_vlm"],
         "abstract_zh": "视觉导航目标常用图像指定，接口不自然。LM-Nav 组合预训练语言模型、视觉—语言模型与视觉导航模型：LLM 把自由语言指令分解为地标列表，VLM 在拓扑图上接地这些地标，导航模型再执行。系统在真实户外环境中用语言指令导航，且无需语言标注的导航轨迹。",
         "highlights_zh": [
@@ -168,7 +168,7 @@ KEEP = {
         ],
     },
     "2305.15021": {
-        "tags": ["agent-robot", "VLM"],
+        "tags": ["agent-robot", "llm-agent", "VLM"],
         "sources": ["agent_robot", "vla_vln_vlm"],
         "abstract_zh": "EmbodiedGPT 是面向具身人工智能的端到端多模态基础模型，用具身思维链做视觉—语言预训练，使智能体具备多模态理解与规划执行能力。模型在具身规划、视觉问答与操作相关基准上提升，展示把 VLM 预训练接到动作序列的路径。",
         "highlights_zh": [
@@ -198,7 +198,7 @@ KEEP = {
         ],
     },
     "2306.00937": {
-        "tags": ["agent-robot"],
+        "tags": ["agent-robot", "llm-agent"],
         "sources": ["agent_robot"],
         "abstract_zh": "STEVE-1 把 VPT 行为基础模型按 unCLIP 思路做指令微调：先在 MineCLIP 潜空间对齐指令，再训练文本先验，从而用自监督行为克隆与事后重标注降低文本标注成本（约 60 美元算力）。它用原始像素与键鼠低层控制跟随短时程开放指令，在早期游戏评测中稳健完成 13 项中的 12 项。",
         "highlights_zh": [
@@ -358,13 +358,13 @@ KEEP = {
         ],
     },
     "2311.12871": {
-        "tags": ["VLA", "VLM"],
-        "sources": ["vla_vln_vlm"],
-        "abstract_zh": "LEO（Embodied Generalist Agent in 3D World）在三维世界中用统一模型做导航与操作等具身任务，连接语言与 3D 感知—动作。作为具身通才，它补全本包 OSS 已收录、论文卡片此前缺失的缺口。",
+        "tags": ["agent-robot", "llm-agent", "VLA", "VLM"],
+        "sources": ["agent_robot", "vla_vln_vlm", "researcher_pack"],
+        "abstract_zh": "现有通用模型多依赖二维图像，对三维输入与三维世界中定义的任务（接地、具身推理与行动）能力有限。LEO 是面向三维世界的具身多模态通才智能体，统一任务接口、架构与目标，分两阶段训练：三维视觉—语言对齐，再做三维视觉—语言—动作（VLA）指令微调。作者收集物体级与场景级大规模数据，并用 LLM 辅助管线生成高质量三维视觉—语言数据。实验覆盖三维描述、问答、具身推理、导航与操作；消融与缩放分析为后续具身通才提供参照。代码与数据见项目页。",
         "highlights_zh": [
-            "方法：统一具身通才模型在 3D 世界中做语言条件导航与操作。",
-            "贡献：展示三维感知—语言—动作的通才智能体。",
-            "与 Agent / WM×VLA/VLN/VLM：3D VLA / 具身通才，介于 VLM 与动作策略之间。",
+            "方法：两阶段训练——3D 视觉—语言对齐 + 3D VLA 指令微调；统一接口，并以 LLM 辅助生成 3D VL 数据。",
+            "贡献：在三维描述、问答、具身推理、导航与操作上展示通才能力，并给出消融与缩放分析。",
+            "与 Agent / WM×VLA/VLN/VLM：研究员包标为具身 LLM Agent；同时是 3D VLM / VLA 通才。",
         ],
     },
     "2312.02519": {
