@@ -1,7 +1,7 @@
 # Open-Source World-Model / VLA / VLN Repository Comparison
 
-Survey date: **2026-09-11**. Every URL below was verified via GitHub page fetch and/or LICENSE/commits.atom; all 31 URLs returned HTTP 200.
-**Verified count: 31**.
+Survey date: **2026-09-12**. Every URL below was verified via GitHub page fetch and/or GitHub API; all 42 URLs returned HTTP 200.
+**Verified count: 42**.
 
 Stars are approximate snapshots from GitHub pages at survey time. Licenses from LICENSE files when present; otherwise marked not stated.
 
@@ -40,6 +40,17 @@ Stars are approximate snapshots from GitHub pages at survey time. Licenses from 
 | MineDojo | MineDojo | https://github.com/MineDojo/MineDojo | MIT | 2255 | video/game + language (Minecraft embodied platform) | last commit 2023-08-29 | 2206.08853 | MineDojo: open-ended Minecraft embodied agent platform with internet-scale knowledge. Adjacent to WM research (DreamerV3 diamond challenge etc.). |
 | Voyager | MineDojo | https://github.com/MineDojo/Voyager | MIT | 7193 | language (LLM agent) + Minecraft | last commit 2023-07-27 | 2305.16291 | Voyager: LLM-powered open-ended Minecraft agent (skill library/curriculum). Not a learned world model; adjacent embodied stack. |
 | minerl | minerllabs | https://github.com/minerllabs/minerl | CC-BY-NC-SA-4.0 | 974 | video/game (Minecraft RL env + datasets) | last commit 2025-01-22 | — | MineRL: sample-efficient RL competition env/datasets in Minecraft. Common benchmark substrate for world-model agents; NC-SA license. |
+| VoxPoser | huangwl18 | https://github.com/huangwl18/VoxPoser | MIT | 834 | language → 3D value maps + motion planning | last commit 2025-02-20 | 2307.05973 | LLM-composed 3D value maps for language-conditioned manipulation. Agent-controls-robot (code/value-map), not a learned WM. |
+| Eureka | eureka-research | https://github.com/eureka-research/Eureka | MIT | 3197 | language → reward programs + RL | last commit 2024-05-03 | 2310.12931 | Coding-LLM reward design for robot skill synthesis. Agent writes rewards; low-level controller is RL, not a VLA. |
+| STEVE-1 | Shalev-Lifshitz | https://github.com/Shalev-Lifshitz/STEVE-1 | not stated (no SPDX license in API) | 219 | pixels + MineCLIP text-to-behavior (Minecraft) | last commit 2024-06-04 | 2306.00937 | Open-ended Minecraft instruction following on VPT. Official code; license file not stated via API. |
+| openpi | Physical-Intelligence | https://github.com/Physical-Intelligence/openpi | Apache-2.0 | 13770 | vision + language + action (π₀ / π₀.₅) | last commit 2026-08-24 | 2410.24164, 2504.16054 | Official OpenPI stack for π-series VLA. Common frozen backend for hierarchical agents. |
+| Isaac-GR00T | NVIDIA | https://github.com/NVIDIA/Isaac-GR00T | Apache-2.0 | 8050 | humanoid VLA (dual-system VLM + action) | last commit 2026-08-20 | 2503.14734 | GR00T N1 open humanoid foundation model. Already forked to topsun-bot. |
+| SpatialVLA | SpatialVLA | https://github.com/SpatialVLA/SpatialVLA | not stated (no SPDX license in API) | 723 | spatial-enhanced VLA | last commit 2025-06-23 | 2501.15830 | RSS 2025 spatial VLA trained on ~1.1M real episodes. License not stated via API. |
+| NaVILA | AnjieCheng | https://github.com/AnjieCheng/NaVILA | Apache-2.0 | 710 | legged VLA navigation | last commit 2025-08-20 | 2412.04453 | RSS 2025 legged vision-language-action navigation. Already forked to topsun-bot. |
+| Co-LLM-Agents | UMass-Embodied-AGI | https://github.com/UMass-Embodied-AGI/Co-LLM-Agents | not stated (no SPDX license in API) | 309 | multi-agent LLM (plan + communicate) | last commit 2025-03-30 | 2307.02485 | CoELA: cooperative embodied language agents (ICLR 2024). Modular perception/memory/comms/planning. |
+| ReAct | ysymyth | https://github.com/ysymyth/ReAct | MIT | 4163 | language agent (reason + act) | last commit 2024-02-06 | 2210.03629 | Landmark reason-and-act loop. Not a robot stack; cited by Voyager / VLN tool-calling. |
+| roco | MandiZhao | https://github.com/MandiZhao/roco | MIT | 263 | multi-robot LLM dialogue + motion planning | last commit 2023-10-04 | 2307.04738 | RoCoBench + dialectic multi-arm collaboration with LLMs. |
+| ok-robot | ok-robot | https://github.com/ok-robot/ok-robot | MIT | 613 | open-vocab perception + language pick-and-drop | last commit 2024-03-04 | 2401.12202 | Modular zero-shot home pick-and-place from open-knowledge models. |
 
 ## Family coverage notes
 
@@ -53,15 +64,17 @@ Stars are approximate snapshots from GitHub pages at survey time. Licenses from 
 | GameNGen | Google GameNGen **no verified official OSS** found; Oasis/DIAMOND cover GameNGen-like interactive video WMs |
 | NVIDIA Cosmos | Included (`NVIDIA/cosmos`, cosmos-predict1, cosmos-predict2.5) |
 | 3D-VLA / RoboDreamer / LEO / DayDreamer | Included |
-| OpenVLA / Octo / Open X-Embodiment | Included (VLA/dataset stacks) |
-| VLN-BERT / MapGPT / NavGPT / VLN-CE | Included (Recurrent-VLN-BERT + MapGPT + NavGPT + VLN-CE) |
+| OpenVLA / Octo / OpenPI / GR00T / SpatialVLA / Open X-Embodiment | Included (VLA/dataset stacks) |
+| VLN-BERT / MapGPT / NavGPT / VLN-CE / NaVILA | Included |
 | JEPA / V-JEPA | Included (`facebookresearch/jepa`, `vjepa2`) |
-| MineRL / MineDojo / Voyager | Included (adjacent embodied platforms) |
+| MineRL / MineDojo / Voyager / STEVE-1 | Included (adjacent embodied / open-ended agents) |
+| Agent-controls-robot (CaP / VoxPoser / Eureka / RoCo / CoELA / OK-Robot / ReAct) | Included where official GitHub 200; Code-as-Policies official monorepo not separately verified beyond project page |
 
 ## Exclusions (honest)
 
 - **No invented repos.** Candidates that failed verification or are closed-source were omitted.
 - **GAIA-1 official**, **Genie official**, **UniSim interactive simulator code**, **GameNGen official** were not found as open trainable/inference stacks with public weights/code matching the papers.
+- **Industrial agent stacks** (some Gemini Robotics deployment graphs, unpublished fleet orchestrators) have papers but no matching official trainable OSS in this pass.
 - Prefer actively maintained / well-known OSS; community WIP Genie servers (e.g. experimental opengenie stacks) omitted to keep the table focused.
 
 ## Machine-readable
