@@ -9,6 +9,7 @@ Short survey points for a robotics / ODM stack. No fabricated citations.
 - **VLA (Vision-Language-Action)**: policy / foundation model that maps vision + language instructions → robot actions (often continuous control or action tokens). Examples in OSS: OpenVLA, Octo.
 - **VLN (Vision-and-Language Navigation)**: agents that follow natural-language route instructions in visual environments (discrete graph or continuous Habitat-style). Examples: VLN-CE, NavGPT, MapGPT.
 - **Intersection papers**: works that explicitly couple WM imagination with VLA/VLN, or use WM-style prediction inside language-conditioned control / nav (tagged `intersection` or multi-tagged in this pack).
+- **Agent-controlling-robots (`agent-robot` / `llm-agent`)**: LLM/VLM runtime that *orchestrates* perception, planning, tools, code, or skills to drive a robot or embodied body. Outputs are often subgoals, Python policies, tool calls, or dispatch to a frozen VLA — not a single action-token forward pass. Compositions: (A) agent + skill/VLA, (B) code-as-policy, (C) optional agent + world-model rollouts, (D) multi-agent dialog. Agents also add prompt-injection / jailbreak / unlawful-instruction risks that pure VLAs do not. See `CROSSWALK.zh.md` and `research/agent_robotics/AGENT_CROSSWALK.md`.
 
 ## How they compose
 

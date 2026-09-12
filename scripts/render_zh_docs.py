@@ -5,8 +5,18 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
+
+TAG_MEANING = {
+    "world_model": "世界模型主线",
+    "VLM": "视觉—语言模型 / 具身多模态",
+    "VLA": "视觉—语言—动作策略",
+    "intersection": "跨家族 / 桥接（如 `WM` 引导的 `VLA`）",
+    "VLN": "视觉—语言导航",
+    "agent-robot": "Agent 控制机器人 / 具身编排",
+    "llm-agent": "LLM / 工具使用 / 规划智能体",
+}
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -31,6 +41,8 @@ def display_title(title: str) -> str:
     """Avoid $math$ in GitHub headings; keep Unicode subscripts."""
     t = title.replace("$τ_0$", "τ₀").replace("$π_0$", "π₀")
     t = t.replace("$\\tau_0$", "τ₀").replace("$\\pi_0$", "π₀")
+    t = t.replace("$π_{0.5}$", "π₀.₅").replace("$\\pi_{0.5}$", "π₀.₅")
+    t = t.replace("$π_{0.7}$", "π₀.₇").replace("$\\pi_{0.7}$", "π₀.₇")
     return t
 
 
@@ -74,23 +86,40 @@ def load_rows() -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def tag_table(rows: list[dict]) -> list[str]:
+    counts = Counter(t for r in rows for t in r["tags"])
+    order = ["agent-robot", "llm-agent", "world_model", "VLA", "VLM", "VLN", "intersection"]
+    extra = [t for t in counts if t not in order]
+    lines = [
+        "| 标签 | 含义 | 篇数 |",
+        "| --- | --- | ---: |",
+    ]
+    for t in order + sorted(extra):
+        if t not in counts:
+            continue
+        meaning = TAG_MEANING.get(t, t)
+        lines.append(f"| `{t}` | {meaning} | {counts[t]} |")
+    return lines
+
+
 def render_papers_md(rows: list[dict]) -> str:
     by_year: dict[int, list[dict]] = defaultdict(list)
     for r in rows:
         by_year[int(r["year"])].append(r)
 
     years = sorted(by_year, reverse=True)
+    n = len(rows)
     lines: list[str] = []
     lines += [
         "# 论文索引",
         "",
-        "已核验、去重后的 **131** 篇速查页。",
+        f"已核验、去重后的 **{n}** 篇速查页。",
         "",
         "摘要与要点见 [`PAPERS_DETAIL.md`](PAPERS_DETAIL.md)。",
         "英文原文见 [`papers_detailed.jsonl`](papers_detailed.jsonl)。",
         "",
         "主键为 arXiv ID（去掉版本后缀 `vN`），否则用规范化标题。",
-        "本页按年份列出标题，不把 131 行摘要塞进宽表。",
+        f"本页按年份列出标题，不把 {n} 行摘要塞进宽表。",
         "",
         "## 本页目录",
         "",
@@ -130,15 +159,11 @@ def render_papers_md(rows: list[dict]) -> str:
     lines += [
         "## 标签",
         "",
-        "| 标签 | 含义 | 篇数 |",
-        "| --- | --- | ---: |",
-        "| `world_model` | 世界模型主线 | 58 |",
-        "| `VLM` | 视觉—语言模型 / 具身多模态 | 23 |",
-        "| `VLA` | 视觉—语言—动作策略 | 20 |",
-        "| `intersection` | 跨家族 / 桥接 | 19 |",
-        "| `VLN` | 视觉—语言导航 | 18 |",
+    ]
+    lines += tag_table(rows)
+    lines += [
         "",
-        "一篇可带多个标签。细分标签（如 `video_prediction_wm`）仅扩表时出现；本包未扩表。",
+        "一篇可带多个标签。`agent-robot` / `llm-agent` 标记语言智能体编排或控制机器人（及规划 / 工具使用前驱）；可与 `VLA` / `VLN` / `world_model` 并存。",
         "",
     ]
     return "\n".join(lines)
@@ -178,7 +203,7 @@ def render_detail_md(rows: list[dict]) -> str:
         "- 摘要来源：arXiv API（[`export.arxiv.org`](http://export.arxiv.org/api/query)）",
         "  或 abs 页（`https://arxiv.org/abs/<id>`）。",
         "- 抓取失败会写 **摘要暂缺**，并保留已核验链接。",
-        "- 要点只依据该摘要：方法、贡献、与 `WM` × `VLA` / `VLN` / `VLM` 的关系。",
+        "- 要点只依据该摘要：方法、贡献、与 Agent / `WM` × `VLA` / `VLN` / `VLM` 的关系。",
         "  不编造摘要中未出现的实验数字。",
         "",
         "## 年份一览",
@@ -240,8 +265,8 @@ def render_detail_md(rows: list[dict]) -> str:
 
 def main() -> None:
     rows = load_rows()
-    if len(rows) != 131:
-        raise SystemExit(f"expected 131 rows, got {len(rows)}")
+    if len(rows) < 100:
+        raise SystemExit(f"expected at least 100 rows, got {len(rows)}")
     (ROOT / "PAPERS.md").write_text(render_papers_md(rows), encoding="utf-8")
     (ROOT / "PAPERS_DETAIL.md").write_text(render_detail_md(rows), encoding="utf-8")
     print(f"rendered {len(rows)} papers → PAPERS.md + PAPERS_DETAIL.md")
