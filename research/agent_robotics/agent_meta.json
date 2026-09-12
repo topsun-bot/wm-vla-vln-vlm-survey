@@ -1,0 +1,124 @@
+{
+  "new_count": 79,
+  "skipped_already_in_merge": 5,
+  "existing_ids_loaded": 131,
+  "queries": [
+    "LLM agent robotics",
+    "code as policies robot",
+    "SayCan language robot",
+    "embodied agent LLM",
+    "tool use robot LLM",
+    "ReAct robot planning",
+    "multi-agent LLM robot",
+    "ProgPrompt VoxPoser",
+    "Inner Monologue robot",
+    "language planner manipulation",
+    "Voyager GITM MineDojo",
+    "Instruct2Act SayPlan RoboGPT",
+    "Awesome-LLM-Robotics list verify"
+  ],
+  "rejected_wrong_ids": {
+    "2305.20050": "math verifier not robotics",
+    "2306.15691": "materials science wrong ID",
+    "2308.07913": "physics glassy dynamics wrong ID",
+    "2309.12306": "active speaker detection wrong ID",
+    "2309.16048": "acoustic howling wrong ID",
+    "2310.10196": "time series survey wrong ID",
+    "2401.13138": "AI agent visibility not robotics",
+    "2402.14752": "quantum SOS wrong ID",
+    "2404.07718": "geophysics wrong ID",
+    "2404.07991": "avatar modeling wrong ID",
+    "2407.01572": "finance wrong ID",
+    "2308.03201": "math braids wrong ID",
+    "2403.12968": "LLMLingua not robotics",
+    "2410.22367": "molecular MAMMAL wrong ID",
+    "2406.04308": "BO not robotics",
+    "2501.05714": "NLP human coop survey not robot",
+    "2412.10363": "math variational wrong ID",
+    "2404.15185": "ViT energy wrong ID",
+    "2405.01481": "NeMo-Aligner not robotics",
+    "2311.07207": "NMR crystals wrong ID",
+    "2405.14231": "role-play drama not robotics"
+  },
+  "excluded_out_of_scope_or_trim": [
+    "2109.12098",
+    "2205.06175",
+    "2205.10712",
+    "2211.11736",
+    "2301.02555",
+    "2303.00001",
+    "2303.00905",
+    "2304.03442",
+    "2304.04321",
+    "2304.13826",
+    "2305.01795",
+    "2306.08647",
+    "2307.14535",
+    "2308.10141",
+    "2309.02561",
+    "2309.11489",
+    "2311.00530",
+    "2311.02379",
+    "2311.14379",
+    "2401.00812",
+    "2402.03494",
+    "2403.09583",
+    "2403.11289",
+    "2403.12533",
+    "2405.02794",
+    "2405.13245",
+    "2405.14005",
+    "2406.07549",
+    "2406.18915",
+    "2409.01652",
+    "2410.00371",
+    "2505.19789"
+  ],
+  "retrieval_utc": "2026-09-12T01:46:08Z",
+  "method": "arXiv abs page HTTPS title verification + Awesome-LLM-Robotics + WebSearch; dedupe strip vN against merged/wm/vla jsonl",
+  "year_range": [
+    2022,
+    2025
+  ],
+  "tag_vocabulary": [
+    "agent",
+    "llm-agent",
+    "code-as-policy",
+    "saycan",
+    "react",
+    "multi-agent",
+    "embodied",
+    "tool-use"
+  ],
+  "output_paths": [
+    "papers_agent_robotics.jsonl",
+    "papers_agent_robotics.md",
+    "AGENT_CROSSWALK.md",
+    "agent_meta.json",
+    "agent_verify_sample.log"
+  ],
+  "skipped_already_in_merge_ids": [
+    {
+      "arxiv_id": "2204.01691",
+      "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances"
+    },
+    {
+      "arxiv_id": "2207.05608",
+      "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models"
+    },
+    {
+      "arxiv_id": "2303.03378",
+      "title": "PaLM-E: An Embodied Multimodal Language Model"
+    },
+    {
+      "arxiv_id": "2307.06135",
+      "title": "SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning"
+    },
+    {
+      "arxiv_id": "2311.07226",
+      "title": "Large Language Models for Robotics: A Survey"
+    }
+  ],
+  "spot_check_pass_rate": "10/10",
+  "note": "skipped_already_in_merge counts high-priority agent candidates already present in papers_merged (SayCan, Inner Monologue, PaLM-E, SayPlan, LLM-for-Robotics survey). Additional VLA overlap intentionally avoided via exclude list."
+}
