@@ -1,5 +1,7 @@
 # World Model × VLA / VLN / VLM 调研索引
 
+> **项目定位**：World Model × VLA / VLN / VLM survey: ≥100 verified papers + OSS landscape (topsun-bot)
+
 > 维护：[`topsun-bot/wm-vla-vln-vlm-survey`](https://github.com/topsun-bot/wm-vla-vln-vlm-survey)（默认分支 `main`）
 
 面向机器人与具身智能的可核验文献包。收录 `World Model`（世界模型）与 `VLA` / `VLN` / `VLM` 交叉处的论文、开源仓库与组合关系；本版补上 **Agent 控制机器人**（LLM / VLM 规划、代码即策略、工具调用、多智能体编排）。
