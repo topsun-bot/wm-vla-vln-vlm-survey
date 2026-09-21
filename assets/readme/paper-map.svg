@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" role="img" aria-labelledby="title desc">
+  <title id="title">Paper map</title>
+  <desc id="desc">Survey tags split into World Model, VLA, VLN, VLM, and Agent-robot, with example papers from this pack.</desc>
+  <rect width="1100" height="420" rx="20" fill="#ffffff"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif">
+    <rect x="28" y="168" width="168" height="72" rx="14" fill="#e8f4ee"/>
+    <text x="112" y="200" text-anchor="middle" font-size="15" font-weight="750" fill="#0a4b38">This survey</text>
+    <text x="112" y="222" text-anchor="middle" font-size="12" fill="#41465a">WM × VLA/VLN/VLM</text>
+
+    <path d="M196 204 H250" stroke="#0f6b4f" stroke-width="2"/>
+    <path d="M250 70 V338 H280" stroke="#0f6b4f" stroke-width="2" fill="none"/>
+
+    <g transform="translate(292 36)">
+      <rect width="230" height="56" rx="12" fill="#e8f4ee"/>
+      <text x="16" y="24" font-size="14" font-weight="750" fill="#0a4b38">World Model</text>
+      <text x="16" y="44" font-size="12" fill="#41465a">DreamerV3 · Cosmos · OSCAR</text>
+    </g>
+    <g transform="translate(292 108)">
+      <rect width="230" height="56" rx="12" fill="#e8eef6"/>
+      <text x="16" y="24" font-size="14" font-weight="750" fill="#315f8f">VLA</text>
+      <text x="16" y="44" font-size="12" fill="#41465a">OpenVLA · Octo · À€ / OpenPI</text>
+    </g>
+    <g transform="translate(292 180)">
+      <rect width="230" height="56" rx="12" fill="#e3f5f2"/>
+      <text x="16" y="24" font-size="14" font-weight="750" fill="#0f766e">VLN</text>
+      <text x="16" y="44" font-size="12" fill="#41465a">VLN-CE · NavGPT · NaVILA</text>
+    </g>
+    <g transform="translate(292 252)">
+      <rect width="230" height="56" rx="12" fill="#eceefd"/>
+      <text x="16" y="24" font-size="14" font-weight="750" fill="#5b5f97">VLM</text>
+      <text x="16" y="44" font-size="12" fill="#41465a">embodied multimodal models</text>
+    </g>
+    <g transform="translate(292 324)">
+      <rect width="230" height="56" rx="12" fill="#f7efda"/>
+      <text x="16" y="24" font-size="14" font-weight="750" fill="#b06f12">Agent-robot</text>
+      <text x="16" y="44" font-size="12" fill="#41465a">VoxPoser · Eureka · Voyager</text>
+    </g>
+
+    <g transform="translate(560 70)">
+      <rect width="510" height="280" rx="16" fill="#f6f7fb"/>
+      <text x="24" y="36" font-size="13" font-weight="750" fill="#0d0f1a">Typical stack (from CROSSWALK)</text>
+      <text x="24" y="70" font-size="15" fill="#41465a">sensors ’ VLM / encoder</text>
+      <text x="24" y="104" font-size="15" fill="#41465a">’ optional world-model rollouts</text>
+      <text x="24" y="138" font-size="15" fill="#41465a">’ VLA / VLN policy or MPC</text>
+      <text x="24" y="172" font-size="15" fill="#41465a">’ low-level controller</text>
+      <text x="24" y="220" font-size="14" fill="#0f6b4f">Agent loop (optional, mid-rate):</text>
+      <text x="24" y="248" font-size="14" fill="#41465a">decompose ’ call skill / VLA ’ verify ’ recover</text>
+    </g>
+  </g>
+</svg>
