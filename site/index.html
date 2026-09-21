@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>World Model × VLA / VLN / VLM — Survey</title>
+    <meta
+      name="description"
+      content="A verified, filterable index of World Model × VLA / VLN / VLM papers and open-source stacks for robotics and embodied AI, including agent-controlled robots."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var savedLang = localStorage.getItem("wm-survey-lang");
+          var lang =
+            savedLang === "en" || savedLang === "zh"
+              ? savedLang
+              : navigator.language && navigator.language.toLowerCase().indexOf("zh") === 0
+                ? "zh"
+                : "en";
+          document.documentElement.setAttribute("data-lang", lang);
+          document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+          var saved = localStorage.getItem("wm-survey-theme");
+          var theme =
+            saved === "light" || saved === "dark"
+              ? saved
+              : window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
